@@ -1,6 +1,6 @@
 # ProjetoPY(UFS)
 
-##Tópicos
+## Tópicos
 
 1- Importar Palavras para o programa e armazenar elas em uma lista
 2- aplicar uma função RAND na lista para selecionar uma palavra
