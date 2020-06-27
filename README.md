@@ -16,12 +16,12 @@
 6- o jogador atual terá 2 opções:
 	
 	6.1- Tentar uma letra
-		se houver a letra na palavra, adiciona a letra e pergunta se ele quer tentar acertar a palavra
-			se sim, verificar se são as palavas são iguais.
-				se sim, o usuário vence
-				senão o usuário perde todas as vidas e é eliminado
-			senão, passar a vez para o outro jogador
-		se não houver a letra na palavra, o usuário perde uma vida
+		 6.1.1- se houver a letra na palavra, adiciona a letra e pergunta se ele quer tentar acertar a palavra
+			6.1.1.1- se sim, verificar se são as palavas são iguais.
+				6.1.1.1.1- se sim, o usuário vence
+				6.1.1.1.2- senão o usuário perde todas as vidas e é eliminado
+			6.1.1.2- senão, passar a vez para o outro jogador
+		 6.2.2- se não houver a letra na palavra, o usuário perde uma vida
 	6.2- Tentar acerta a palavra(aqui é necessário criar uma função para verificar se aspalavras são correspondentes)
 
 (OBS:)cada jogador possui uma quantidade de vidas X(necessário definir)
