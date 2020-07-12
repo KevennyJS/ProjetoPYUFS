@@ -1,6 +1,8 @@
 import random
 import os
 
+Lista_Palavras_Usadas = [ ] #Armazena as palavras que já foram usadas
+
 def Start(): #seleciona uma palavra da lista
     palavra = random.choices(Lista_Palavras)
     numeroRandom = random.randrange(0, len(palavra))
@@ -11,11 +13,115 @@ def cls(): #Limpa tela
     os.system("cls")
 
 def exibirBoneco(vidas): #
-    estagio = ["""
-    
-    #aqui ficam os estágios do boneco
-    """]
+    #estagio = [ 
+    #Forca Inicial
+    if vidas == 0: 
+        print(" _________________________")
+        print("/_________________))______/")
+        print("| |  / /          ||")
+        print("| | / /           ||")
+        print("| |/ /            ||")
+        print("| | /             / \ ")
+        print("| |/             (   )")
+        print("| |               \_/")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
 
+    #Forca 1
+    elif vidas == 1:
+        print(" _________________________")
+        print("/_________________))______/")
+        print("| |  / /          ||")
+        print("| | / /           ||")
+        print("| |/ /            ||")
+        print("| | /           (× ‿ ×) ")
+        print("| |/")
+        print("| | ")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+
+    #Forca 2
+    elif vidas == 2:
+        print(" _________________________")
+        print("/_________________))______/")
+        print("| |  / /          ||")
+        print("| | / /           ||")
+        print("| |/ /            ||")
+        print("| | /           (× ‿ ×) ")
+        print("| |/               |")
+        print("| |               ( ) ")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+
+    #Forca 3
+    elif vidas == 3:
+        print(" _________________________")
+        print("/_________________))______/")
+        print("| |  / /          ||")
+        print("| | / /           ||")
+        print("| |/ /            ||")
+        print("| | /           (× ‿ ×) ")
+        print("| |/               |")
+        print("| |              /( )\ ")
+        print("| |             /     \ ")
+        print("| |            ′      ′ ")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+
+    #Forca 4
+    elif vidas == 4:
+        print(" _________________________")
+        print("/_________________))______/")
+        print("| |  / /          ||")
+        print("| | / /           ||")
+        print("| |/ /            ||")
+        print("| | /           (× ‿ ×) ")
+        print("| |/               |")
+        print("| |              /( )\ ")
+        print("| |             /  |  \  ")
+        print("| |            ′   |  ′ ")
+        print("| |                ∆     ")
+        print("| |")
+        print("| |")
+        print("| |")
+        print("| |")
+
+    #Forca 5
+    elif vidas == 5:
+        print(" _________________________")
+        print("/_________________))______/")
+        print("| |  / /          ||")
+        print("| | / /           ||")
+        print("| |/ /            ||")
+        print("| | /           (× ‿ ×) ")
+        print("| |/               |")
+        print("| |              /( )\ ")
+        print("| |             /  |  \  ")
+        print("| |            ′   |  ′ ")
+        print("| |                ∆     ")
+        print("| |              /   \    ")
+        print("| |             /     \    ")
+        print("| |            ‘       ‘   ")
+        print("| |")
+    #]
 
 Lista_Palavras = [
     #PROFISSÃO
