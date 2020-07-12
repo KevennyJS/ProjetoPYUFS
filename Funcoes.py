@@ -1,5 +1,6 @@
 import random
 import os
+from unicodedata import normalize
 
 Lista_Palavras_Usadas = [ ] #Armazena as palavras que já foram usadas
 
@@ -7,7 +8,12 @@ def Start(): #seleciona uma palavra da lista
     palavra = random.choices(Lista_Palavras)
     numeroRandom = random.randrange(0, len(palavra))
     palavra_Selecionada = palavra[numeroRandom].upper()
+    palavra_Selecionada = remover_acentos(palavra_Selecionada)
     return palavra_Selecionada
+
+def remover_acentos(txt):
+
+    return normalize('NFKD', txt).encode('ASCII', 'ignore').decode('ASCII')   
 
 def cls(): #Limpa tela
     os.system("cls")
