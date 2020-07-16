@@ -18,6 +18,21 @@ def remover_acentos(txt):
 def cls(): #Limpa tela
     os.system("cls")
 
+def palavra(string,palavrasecreta,contvidas):
+
+    if len(string) > 1:  # decide se a string informada é uma palavra ou uma letra
+        if string == palavrasecreta:  # se a palavra informada for igual a palavra secreta, o usuário ganha
+            venceu=True
+            return venceu
+        elif palavra in Lista_Palavras_Usadas:  # caso a palavra informada seja diferente da secreta, ele percorre a lista de palavras usadas e as compara
+            print("Palavra ja utilizada!")
+        else:  # caso a palavra não esteja correta, nem tenha sido utilizada, uma vida é retirada do jogador, e a palavra é adicionada a lista de palavras usadas
+            print("Essa não é a palavra")
+            exibirBoneco(contvidas + 1)  # retira uma vida do jogador
+            Lista_Palavras_Usadas.append(palavra)
+            contvidas += 1
+
+
 def exibirBoneco(vidas): #
     #estagio = [ 
     #Forca Inicial
