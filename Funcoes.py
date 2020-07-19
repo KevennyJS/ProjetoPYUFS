@@ -32,6 +32,13 @@ def palavra(string,palavrasecreta,contvidas):
             Lista_Palavras_Usadas.append(palavra)
             contvidas += 1
 
+def palavraValida(string):
+    #Verifica se a string informada possui um número.
+    temnumero = any(char.isdigit() for char in string)
+    if temnumero == True: # Se tiver números no meio da string informada ele retorna que o dado é inválido
+        print ("Dado informado não é válido!")
+    else: #Se o dado for válido ele agora verifica se é apenas uma letra ou uma palavra e prossegue
+        palavra(string,palavrasecreta,contvidas)
 
 def exibirBoneco(vidas): #
     #estagio = [ 
