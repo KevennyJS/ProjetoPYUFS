@@ -13,7 +13,8 @@ aux = []
 
 
 def welcome():
-    print('''
+    while True:
+        print('''
             BEM VINDO AO JOGO DA FORCA
         
         SELECIONE O TEMA:
@@ -27,8 +28,13 @@ def welcome():
         [7]ALEATÓRIO
 
         OPÇÃO: ''',end = '')
-    opcao = int(input())
-    return SelecionarTema(opcao)
+        opcao = int(input())
+        if opcao > 0 and opcao < 8:
+            return SelecionarTema(opcao)
+        else:
+            print('Opção invalida, tente novamente!')
+            time.sleep(2)
+            cls()
 
 
 def remover_acentos(txt):
