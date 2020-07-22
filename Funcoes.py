@@ -217,7 +217,7 @@ def SelecionarTema(tema):
                 'OVOMALTINE', 'OMELETE', 'OREGANO', 'OSTRA','PUDIM','PIZZA',
                 'QUEIJO', 'QUEIJADINHA', 'QUIABO','ROCAMBOLE', 'SALSICHA',
                 'SUSHI','TAIOBA', 'TALHARIM', 'VATAPÁ','VINAGRETE']
-        return random.choices(COMIDA)
+        return random.choices(COMIDA), "COMIDA"
     elif (tema == 3):
 
         CORPO = ['ABDOMEN','AMÍGDALA', 'AXILA','ARTICULAÇÃO','ARTÉRIAS', 'BAÇO',
@@ -227,7 +227,7 @@ def SelecionarTema(tema):
                 'EPIDERME', 'FARINGE','FALANGES', 'GARGANTA', 'GENGIVAS', 'GLANDES',
                 'HIPODERME', 'ÍRIS', 'INTESTINO', 'JOELHO', 'LÁBIOS', 'LINGUA',
                 'LARINGE', 'MAMILOS', 'MÚSCULOS', 'NARIZ','NÁDEGAS']
-        return random.choices(CORPO)
+        return random.choices(CORPO), "CORPO"
 
     elif (tema == 4):
 
@@ -239,7 +239,7 @@ def SelecionarTema(tema):
                     'PIRANHA', 'QUATI','RAPOSA','ROUXINOL','SUCURI','SARDINHA',
                     'TUBARÃO','TUCANO', 'TAMANDUÁ','URSO','URUBU', 'VACA',
                     'VESPA','VEADO','ZEBRA']
-        return random.choices(ANIMAIS)
+        return random.choices(ANIMAIS), "ANIMAIS"
     elif (tema == 5):
 
         INSTRUMENTOS = [ 'ALAÚDE','ARCODEÃO','BAIXO','BANDOLIM','BATERIA',
@@ -249,7 +249,7 @@ def SelecionarTema(tema):
                         'OBOÉ', 'ORGÃO', 'PANDEIRO','PIANO','PÍFARO','SANFONA',
                         'SAXOFONE','TECLADO','TRIANGULO','TUBA', 'UKULELE',
                         'VIOLÃO', 'VIOLINO','VIOLA','XILOFONE']
-        return random.choices(ISNTRUMENTOS)
+        return random.choices(INSTRUMENTOS), "INSTRUMENTOS"
 
     elif (tema == 6):
 
@@ -258,29 +258,14 @@ def SelecionarTema(tema):
                 'FERRUGEM', 'JADE','JAMBO','LARANJA','LILÁS','MARROM',
                 'MAFIM','MAGNETA','OURO','PRETO','PRATA', 'QUANTUM',
                 'ROSA', 'ROXO','SÉPIA', 'SALMÃO','TURQUESA','VERDE','VERMELHO','VIOLETA']
-        return random.choices(CORES)
+        return random.choices(CORES), "CORES"
 
     elif (tema == 7):
 
-        ALEATORIO = ['AGRICULTOR', 'ARQUITETA', 'ASTRONAUTA', 'BOMBEIRO', 'CANTOR', 'CAFEICULTOR','CABELEREIRO', 'CUTELEIRO', 'CONTADOR', 'DELEGADO', 'DESIGNER', 'ESCRITOR',
-                    'ENFERMEIRA', 'ELETRICISTA', 'FARMACEUTICO', 'FEIRANTE', 'FORJADOR','FOTOGRÁFO', 'HUMORISTA', 'HOMEOPATA', 'GARIMPEIRO', 'GENETICISTA','GERENTE',
-                    'GEOGRÁFO', 'ILUSTRADOR','INTÉRPRETE', 'JORNALISTA', 'LUTHIER', 'LAVRADOR', 'MÉDICO','MOTORISTA', 'NUTRICIONISTA',  'OURIVES', 'OTORRINOLARINGOLOGISTA', 'PADEIRO',
-                    'PEDREIRO', 'PROFESSOR', 'POLICIAL', 'QUIROPRAXISTA', 'QUÍMICO', 'RECEPCIONOSTA','REDATOR', 'RADIALISTA', 'SUSHIMAN', 'SUPERVISOR','TAXISTA', 'UROLOGISTA', 'VIGILANTE', 'VENDEDOR',
-                    'ABACATE','ABACAXI', 'ARROZ', 'BATATA','BISCOITO','BRIGADEIRO', 'CANJICA','CAJU','CHIPS', 'DONUTS','DAMASCO','ERVILHA', 'ESCONDIDINHO','FRANGO','FETTUCCINE',
-                    'FEIJÃO', 'GRAVIOLA', 'GELEIA','GENGIBRE', 'HAMBURGUER','IOGURTE', 'INHAME','JUJUBA', 'KIWI','LAGOSTA','LINGUIÇA',
-                    'MACARRONADA','MACAXEIRA','MORANGO','MOQUECA', 'MUSSARELA','OVOMALTINE', 'OMELETE', 'OREGANO', 'OSTRA','PUDIM','PIZZA',
-                    'QUEIJO', 'QUEIJADINHA', 'QUIABO','ROCAMBOLE', 'SALSICHA','SUSHI','TAIOBA', 'TALHARIM', 'VATAPÁ','VINAGRETE','ABDOMEN','AMÍGDALA', 'AXILA','ARTICULAÇÃO','ARTÉRIAS', 'BAÇO',
-                    'BARRIGA', 'BOCA', 'BRAÇO','CABELO','CABEÇA','CANELA','COTVELO','COLUNA','CÓRNEA', 'CORAÇÃO', 'COXA', 'DEDO', 'DENTE', 'DIAFRAGMA',
-                    'DORSAL', 'ESTOMAGO', 'ENDOCÁRDIO','ESTOMAGO', 'ESQUELETO','EPIDERME', 'FARINGE','FALANGES', 'GARGANTA', 'GENGIVAS', 'GLANDES',
-                    'HIPODERME', 'ÍRIS', 'INTESTINO', 'JOELHO', 'LÁBIOS', 'LINGUA','LARINGE', 'MAMILOS', 'MÚSCULOS', 'NARIZ','NÁDEGAS','ANTA','ABELHA', 'ARARA','ALCE','ASNO','BAIACU','BALEIA',
-                    'BORBOLETA','CABRA','CACHORRO', 'CAPIVARA','DROMEDÁRIO','ELEFANTE','ESQUILO','FAISÃO','GAIVOTA','GALO','HIENA','HAMSTER','IGUANA','JACARÉ','JABURU','LAGOSTA','LEÃO',
-                    'MACACO','MURIÇOCA','ORNITORRINCO','OVELHA','PAPAGAIO','PIRANHA', 'QUATI','RAPOSA','ROUXINOL','SUCURI','SARDINHA','TUBARÃO','TUCANO', 'TAMANDUÁ','URSO','URUBU', 'VACA',
-                    'VESPA','VEADO','ZEBRA','ALAÚDE','ARCODEÃO','BAIXO','BANDOLIM','BATERIA','BAIXO', 'CAIXA','CARRILHÃO','CASTANHOLHAS','CHOCALHO',
-                    'CLARINETE', 'CLARIM','CÍTARA','CORNETE','FAGOTE','FLAUTA', 'FLAUTIM','GAITA', 'GUITARRA', 'HARPA','OBOÉ', 'ORGÃO', 'PANDEIRO','PIANO','PÍFARO','SANFONA',
-                    'SAXOFONE','TECLADO','TRIANGULO','TUBA', 'UKULELE','VIOLÃO', 'VIOLINO','VIOLA','XILOFONE','AZUL', 'ANIL', 'AMETISTA','AMARELO','BRANCO','CINZA',
-                    'CASTANHO','CIANO','DOURADO','ESMERALDA' ,'FÚCSIA','FERRUGEM', 'JADE','JAMBO','LARANJA','LILÁS','MARROM',
-                    'MAFIM','MAGNETA','OURO','PRETO','PRATA', 'QUANTUM','ROSA', 'ROXO','SÉPIA', 'SALMÃO','TURQUESA','VERDE','VERMELHO','VIOLETA']
-        return random.choices(ALEATORIO)
+        RAND = random.randint(1, 8)
+        print(RAND)
+        v1,v2 = SelecionarTema(RAND)
+        return v1,v2
         
 def Start(): 
     global _Palavra_secreta_pontilhada,_palavra_secreta, dica

@@ -13,7 +13,6 @@ while fim != 1:
     while vidas !=0:
         Funcoes.cls()
         print("Dica: ",Funcoes.dica)
-        print(Funcoes._palavra_secreta)
         Funcoes.exibirBoneco(vidas)
         print(Funcoes._Palavra_secreta_pontilhada,"\n")
         tentativa = input("Tentativa: ").upper()
