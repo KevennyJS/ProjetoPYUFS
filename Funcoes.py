@@ -232,7 +232,7 @@ def SelecionarTema(tema):
 
     elif (tema == 6):
 
-        RAND = random.randint(1, 8)
+        RAND = random.randint(1, 5)
         print(RAND)
         v1,v2 = SelecionarTema(RAND)
         return v1,v2
@@ -251,7 +251,7 @@ _Palavra_secreta_pontilhada = "_ " * len(_palavra_secreta) # armazena a palavra 
 
 def reset():
     global _Palavra_secreta_pontilhada,_palavra_secreta
-    aux,acerta,Lista_Letras_Usadas.clear(),Lista_Palavras_Usadas,posicao.clear()
+    aux,acerta,Lista_Letras_Usadas.clear(), Lista_Palavras_Usadas.clear(),posicao.clear()
     _Palavra_secreta_pontilhada = " "
     _palavra_secreta = " "
     _palavra_secreta,dica = Start() # armazena a palavra secreta

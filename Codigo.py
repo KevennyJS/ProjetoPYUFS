@@ -14,7 +14,7 @@ while fim != 1:
     while vidas !=0:
         print(Funcoes._palavra_secreta)
         #Mostra a tela com o boneco, as dica, as vidas e a palavra pontilhada
-        tentativa = interface.telaBoneco(Funcoes.dica, str(vidas),Funcoes._Palavra_secreta_pontilhada)
+        tentativa = interface.telaBoneco(Funcoes.dica, str(vidas),Funcoes._Palavra_secreta_pontilhada, Funcoes.Lista_Letras_Usadas)
         tentativa = tentativa.upper()
         retorno = Funcoes.palavraValida(tentativa)
         if retorno == 1:

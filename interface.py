@@ -2,6 +2,7 @@ from functools import partial
 from tkinter import *
 from tkinter import messagebox
 from string import ascii_uppercase
+import Funcoes
 
 def btnClick(opcao, janela):
     janela.destroy()
@@ -57,14 +58,15 @@ def telaInicial():
     return content.get()
     
 
-def telaBoneco(dica, vidas ,palavra_secreta_pontilhada):
+def telaBoneco(dica, vidas ,palavra_secreta_pontilhada, listaLetraUsada):
     janela = Tk()
     content = StringVar()
     janela.title("JOGO DA FORCA")
-    lblpalavra = StringVar()
+    lblPalavraPontilhada = StringVar()
+    lblLetra = StringVar()
     Label(janela, text = "DICA: "+dica, font = ("Consolas 15 bold")).pack()
     Label(janela, text = "VIDAS: "+vidas, font = ("Consolas 15 bold")).pack()
-    lblpalavra.set(palavra_secreta_pontilhada)
+    lblPalavraPontilhada.set(palavra_secreta_pontilhada)
     if(vidas == '6'):
         logo = PhotoImage(file="imagens/img0.png")
         w1 = Label(janela, image=logo).pack(anchor = W)
@@ -87,26 +89,27 @@ def telaBoneco(dica, vidas ,palavra_secreta_pontilhada):
         logo = PhotoImage(file="imagens/img6.png")
         w7 = Label(janela, image=logo).pack(anchor = W) 
               
-    Label(janela, textvariable = lblpalavra, font = ("Consolas 24 bold")).pack()
-    Label(janela, text = "").pack()
+    Label(janela, textvariable = lblPalavraPontilhada, font = ("Consolas 20 bold")).pack()
     Label(janela, text = "").pack()
     lb4 = Label(janela, text = "Digite uma Letra/Palavra:", font = ("Consolas 10")).pack()
     
     opcao = Entry(janela, textvariable=content)
     opcao.pack()
-    
+     
     btn = Button(janela, text = "OK") 
     btn["command"] = partial(btnClick2, opcao, janela)
     btn.pack()
-
-    janela.geometry('550x400')
+    
+    lblLetra.set(listaLetraUsada)
+    Label(janela, text = "").pack()
+    Label(janela, text = "Letras já digitadas: ", font = ("Consolas 10")).pack()
+    Label(janela, textvariable = lblLetra, font = ("Consolas 10 bold")).pack()
+    Label(janela, text = "").pack()
+    janela.geometry('600x450')
     janela.mainloop()  
     
-    return content.get() 
+    return content.get()
 
-
-def verificaLetraDigitada(verifica):
-    messagebox.showwarning("JOGO DA FORCA", verifica)
 
 def ganhou(palavraSecreta):
     janela = Tk()
@@ -167,4 +170,3 @@ def perdeu():
     janela.mainloop()  
    
     return content.get() 
-
